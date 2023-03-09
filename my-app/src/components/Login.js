@@ -14,6 +14,14 @@ class Login extends React.Component {
     });
   };
 
+  handleResetState = () => {
+    this.setState({
+        username: '',
+        password: '',
+        remember: false,
+    })
+}
+
   render() {
     const { username, password } = this.state;
     const disabled = username === '' || password === '';
@@ -35,6 +43,9 @@ class Login extends React.Component {
           </div>
           <div>
             <button type="submit" disabled={disabled} onClick={() => this.props.onLogin(this.state)}>Login</button>
+          </div>
+          <div>
+          <button onClick={this.handleResetState}>Reset</button>
           </div>
         </form>
       </div>
