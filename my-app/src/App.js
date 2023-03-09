@@ -9,8 +9,8 @@ class App extends React.Component {
     return (
       <div>
        
-        <Counter initialCount={5} increment={3} interval={3000}/>
        
+       <Counter initialCount={5} increment={3} interval={3000}/>
 
       </div>
     )
