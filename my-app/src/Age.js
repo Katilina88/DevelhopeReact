@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
 
 class Age extends React.Component {
-    render() {
-        return <p>Your age is {this.props.age}</p>
-    }
+  render() {
+    const age = this.props.age;
+
+    return (
+      <div>
+        {age >= 18 ? <h1>Your age is {age}</h1> : <h1>You are very young!</h1>}
+      </div>
+    );
+  }
 }
-export default Age
+
+export default Age;
