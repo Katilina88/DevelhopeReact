@@ -3,7 +3,7 @@ import React from "react";
 import Counter from './Counter'; 
 
 import ClickCounter from "./ClickCounter";
-
+import ClickTracker from "./ClickTracker";
 
 
 class App extends React.Component {
@@ -13,7 +13,8 @@ class App extends React.Component {
        
        
        {/*<Counter initialCount={5} increment={3} interval={3000}/>*/}
-       <ClickCounter />
+       {/*<ClickCounter />*/}
+       <ClickTracker />
 
       </div>
     )

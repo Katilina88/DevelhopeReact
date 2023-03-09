@@ -1,4 +1,4 @@
-import React from 'react'
+{/*import React from 'react'
 
 class ClickCounter extends React.Component {
     constructor(props) {
@@ -24,5 +24,5 @@ class ClickCounter extends React.Component {
     }
 }
 
-export default ClickCounter
+export default ClickCounter*/}
 
