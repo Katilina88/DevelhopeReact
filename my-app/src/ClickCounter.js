@@ -7,7 +7,7 @@ class ClickCounter extends React.Component {
             count: 0
         }
 
-        this.clickHandler = () => {
+     clickHandler = () => {
             this.setState({
                 count: this.state.count + 1
             })
