@@ -1,4 +1,4 @@
-import React from 'react';
+{/*import React from 'react';
 import CounterDisplay from './CounterDisplay';
 
 class Counter extends React.Component {
@@ -22,4 +22,5 @@ class Counter extends React.Component {
   }
 }
 
-export default Counter;
+export default Counter;*/}
+
