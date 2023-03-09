@@ -1,5 +1,6 @@
 import React from "react";
-import Welcome from './Welcome'; 
+
+import Counter from './Counter'; 
 
 
 
@@ -7,8 +8,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Welcome name = {<strong>Caterina</strong>} age= {34} />
-        <Welcome />
+       
+        <Counter initialCount={5} increment={3} interval={3000}/>
+       
 
       </div>
     )
