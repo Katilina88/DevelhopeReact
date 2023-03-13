@@ -1,27 +1,29 @@
 import React from 'react';
 
 class TodoList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [],
-      newItem: ''
-    };
-  }
+  _input = React.createRef();
+
+  state = {
+    items: [
+      "Do homework", 
+      "Play Piano"
+    ],
+    newItem: ''
+  };
 
   addItem = () => {
-    this.setState({
-      items: [...this.state.items, this.state.newItem],
+    this.setState((prevState) => ({
+      items: [...prevState.items, prevState.newItem],
       newItem: ''
-    });
+    }));
+    this._input.current.value = '';
   };
 
   render() {
     return (
       <div>
         <h1>To Do</h1>
-      
-        <input type="text" value={this.state.newItem} onChange={(e) => this.setState({ newItem: e.target.value })} />
+        <input type="text" ref={this._input} value={this.state.newItem} onChange={(e) => this.setState({ newItem: e.target.value })} />
         <button onClick={this.addItem}>Aggiungi Elemento</button>
         <ul>
           {this.state.items.map((item, index) => (
@@ -34,3 +36,4 @@ class TodoList extends React.Component {
 }
 
 export default TodoList;
+
