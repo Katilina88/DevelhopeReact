@@ -16,15 +16,18 @@ class Login extends React.Component {
 
   handleResetState = () => {
     this.setState({
-        username: '',
-        password: '',
-        remember: false,
-    })
-}
+      username: '',
+      password: '',
+      remember: false,
+    });
+  };
 
   render() {
     const { username, password } = this.state;
     const disabled = username === '' || password === '';
+    const buttonStyle = {
+      backgroundColor: password.length < 8 ? 'red' : 'green'
+    };
 
     return (
       <div>
@@ -32,20 +35,20 @@ class Login extends React.Component {
         <form>
           <div>
             <label>Username</label>
-            <input name="username" value={this.state.username} onChange={this.handleInputChange} />
+            <input name="username" value={username} onChange={this.handleInputChange} />
           </div>
           <div>
             <label>Password</label>
-            <input name="password" type="password" value={this.state.password} onChange={this.handleInputChange} />
+            <input name="password" type="password" value={password} onChange={this.handleInputChange} />
           </div>
           <div>
             <input name="remember" type="checkbox" checked={this.state.remember} onChange={this.handleInputChange} />
           </div>
           <div>
-            <button type="submit" disabled={disabled} onClick={() => this.props.onLogin(this.state)}>Login</button>
+            <button type="submit" disabled={disabled} style={buttonStyle} onClick={() => this.props.onLogin(this.state)}>Login</button>
           </div>
           <div>
-          <button onClick={this.handleResetState}>Reset</button>
+            <button onClick={this.handleResetState}>Reset</button>
           </div>
         </form>
       </div>
@@ -54,4 +57,3 @@ class Login extends React.Component {
 }
 
 export default Login;
-
