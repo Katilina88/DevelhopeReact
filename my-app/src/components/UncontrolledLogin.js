@@ -24,7 +24,7 @@ class UncontrolledLogin extends React.Component {
       <div>
         <h3>Uncontrolled Form</h3>
         <form ref={this.formRef} onSubmit={this.handleSubmit}>
-          <input name="username" />
+          <input name="username" defaultValue="Caterina"/>
           <input name="password" type="password" defaultValue="" />
           <input name="remember" type="checkbox" defaultChecked={false} />
 
