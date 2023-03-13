@@ -18,6 +18,12 @@ class TodoList extends React.Component {
     }));
     this._input.current.value = '';
   };
+  
+  handleResetState = () => {
+    this.setState({
+        items: []
+    })
+}
 
   render() {
     return (
@@ -30,6 +36,7 @@ class TodoList extends React.Component {
             <li key={index}>{item}</li>
           ))}
         </ul>
+        <button onClick={this.handleResetState}>Reset</button>
       </div>
     );
   }
