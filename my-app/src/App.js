@@ -15,7 +15,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Container>
+        <Container title="My Title">
+          
        
        
        {/*<Counter initialCount={5} increment={3} interval={3000}/>*/}
