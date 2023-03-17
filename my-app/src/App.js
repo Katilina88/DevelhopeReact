@@ -9,12 +9,13 @@ import Login from "./components/Login"
 import UncontrolledLogin from "./components/UncontrolledLogin";
 import TodoList from "./components/TodoList";
 import Welcome from "./components/Welcome";
-
+import Container from "./components/Container";
 
 class App extends React.Component {
   render() {
     return (
       <div>
+        <Container>
        
        
        {/*<Counter initialCount={5} increment={3} interval={3000}/>*/}
@@ -25,6 +26,8 @@ class App extends React.Component {
        <UncontrolledLogin />
        <TodoList />
        <Welcome />
+       </Container>
+      
 
       </div>
     )
