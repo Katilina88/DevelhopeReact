@@ -29,7 +29,7 @@ class App extends React.Component {
        <UncontrolledLogin />
        <TodoList />*/}
     <Welcome />
-    <FunctionSum numbers={[1, 2, 3, 4, 5, ]} />
+    <FunctionSum  />
        
         </Container>
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function FunctionSum({numbers}) {
+function FunctionSum({numbers = [0]}) {  //imposto un valore di default
     const sum = numbers.reduce((acc, curr) => acc + curr, 0)
 
   return (
