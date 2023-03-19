@@ -10,6 +10,7 @@ import UncontrolledLogin from "./components/UncontrolledLogin";
 import TodoList from "./components/TodoList";
 import Welcome from "./components/Welcome";
 import Container from "./components/Container";
+import FunctionSum from "./components/FunctionSum";
 
 
 class App extends React.Component {
@@ -28,6 +29,7 @@ class App extends React.Component {
        <UncontrolledLogin />
        <TodoList />*/}
     <Welcome />
+    <FunctionSum numbers={[1, 2, 3, 4, 5, ]} />
        
         </Container>
 
