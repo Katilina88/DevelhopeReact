@@ -1,6 +1,6 @@
 import React from "react";
 
-import Counter from './components/Counter'; 
+import Counter from './components/Counter';
 
 import ClickCounter from "./components/ClickCounter";
 import ClickTracker from "./components/ClickTracker";
@@ -11,24 +11,26 @@ import TodoList from "./components/TodoList";
 import Welcome from "./components/Welcome";
 import Container from "./components/Container";
 
+
 class App extends React.Component {
   render() {
     return (
       <div>
         <Container title="My Title">
-          
-       
-       
-       {/*<Counter initialCount={5} increment={3} interval={3000}/>*/}
-       {/*<ClickCounter />*/}
-       {/*<ClickTracker />*/}
-       <InteractiveWelcome />
+
+
+
+          {/*<Counter initialCount={5} increment={3} interval={3000}/>*/}
+          {/*<ClickCounter />*/}
+          {/*<ClickTracker />*/}
+          {/*<InteractiveWelcome />
        <Login />
        <UncontrolledLogin />
-       <TodoList />
-       <Welcome />
-       </Container>
-      
+       <TodoList />*/}
+    <Welcome />
+       
+        </Container>
+
 
       </div>
     )
