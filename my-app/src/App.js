@@ -12,6 +12,7 @@ import FunctionSum from "./components/FunctionSum";
 import { LanguageContext } from "./LanguageContext";
 import DisplayLanguage from "./Displaylanguage";
 import GithubUser from "./components/GithubUser";
+import GithubUserList from "./components/GithubUserList";
 class App extends React.Component {
   state = {
     language: 'en',
@@ -40,7 +41,8 @@ class App extends React.Component {
        
 
         <Container title="My Title">
-      <GithubUser username="katilina88"/>
+     
+      <GithubUserList />
           
           {/*<ClickCounter />
           <Counter initialCount={5} increment={3} interval={3000} />
