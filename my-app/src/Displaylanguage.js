@@ -5,12 +5,15 @@ class DisplayLanguage extends Component {
     render() {
       return (
         <div>
+           
           <LanguageContext.Consumer>
             {(language) => {
-              return <div>The current language is: {language}</div>;
+              return <h1>The current language is: {language}</h1>;
             }}
           </LanguageContext.Consumer>
+         
         </div>
+        
       );
     }
   }
