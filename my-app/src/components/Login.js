@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useState}from 'react';
 
-class Login extends React.Component {
+{/*class Login extends React.Component {
   state = {
     username: '',
     password: '',
@@ -56,4 +56,62 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default Login;*/}
+
+
+function Login() {
+  const[formData, setFormData] = useState({
+    username: '', 
+    password: '', 
+    remember: false
+  })
+
+  const handleChange = (event) => {
+    const { name, type, checked, value } = event.target;
+    const inputValue = type === 'checkbox' ? checked : value;
+    setFormData((prevData) => ({ ...prevData, [name]: inputValue }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+  }
+ 
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        Username:
+        <input
+          type="text"
+          name="username"
+          value={formData.username}
+          onChange={handleChange}
+        />
+      </label>
+      <br />
+      <label>
+        Password:
+        <input
+          type="password"
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
+        />
+      </label>
+      <br />
+      <label>
+        Remember me:
+        <input
+          type="checkbox"
+          name="remember"
+          checked={formData.remember}
+          onChange={handleChange}
+        />
+      </label>
+      <br />
+      <button type="submit">Log in</button>
+    </form>
+  );
+}
+
+export default Login

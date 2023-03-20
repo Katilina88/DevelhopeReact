@@ -21,16 +21,16 @@ class App extends React.Component {
 
 
 
-          {/*<Counter initialCount={5} increment={3} interval={3000}/>*/}
-          {/*<ClickCounter />*/}
-          {/*<ClickTracker />*/}
-          {/*<InteractiveWelcome />
-       <Login />
-       <UncontrolledLogin />
-       <TodoList />*/}
-    <Welcome />
-    <FunctionSum  />
-       
+          <Counter initialCount={5} increment={3} interval={3000} />
+          <ClickCounter />
+          <ClickTracker />
+          <InteractiveWelcome />
+          <Login />
+          <UncontrolledLogin />
+          <TodoList />
+          <Welcome />
+          <FunctionSum />
+
         </Container>
 
 
