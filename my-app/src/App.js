@@ -21,13 +21,24 @@ class App extends React.Component {
 
 
 
-          <Counter initialCount={5} increment={3} interval={3000} />
+          {/*<Counter initialCount={5} increment={3} interval={3000} />
           <ClickCounter />
           <ClickTracker />
           <InteractiveWelcome />
           <Login />
-          <UncontrolledLogin />
-          <TodoList />
+    <UncontrolledLogin /> */}
+          <TodoList
+            render={(items, removeItem) => (
+              <ul>
+                {items.map((item, index) => (
+                  <li key={index}>
+                    {item}
+                    <button onClick={() => removeItem(index)}>Remove</button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          />
           <Welcome />
           <FunctionSum />
 
