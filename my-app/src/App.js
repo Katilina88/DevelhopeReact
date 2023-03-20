@@ -12,11 +12,33 @@ import Welcome from "./components/Welcome";
 import Container from "./components/Container";
 import FunctionSum from "./components/FunctionSum";
 
+import { LanguageContext } from "./LanguageContext";
+import DisplayLanguage from "./Displaylanguage";
 
 class App extends React.Component {
+  state = {
+    language: 'en',
+  };
+
+  handleChangeLanguage = event => {
+    const { value } = event.target;
+    this.setState({ language: value });
+  };
+
+
   render() {
     return (
       <div>
+      <div>
+        <select onChange={this.handleChangeLanguage} value={this.state.language}>
+          <option value="en">English</option>
+          <option value="it">Italian</option>
+          <option value="Ger">German</option>
+        </select>
+        <LanguageContext.Provider value={this.state.language}>
+          <DisplayLanguage />
+        </LanguageContext.Provider>
+      </div>
         <Container title="My Title">
 
 
