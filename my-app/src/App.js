@@ -1,7 +1,5 @@
 import React from "react";
-
-import Counter from './components/Counter';
-
+import Counter from './components/Counter'
 import ClickCounter from "./components/ClickCounter";
 import ClickTracker from "./components/ClickTracker";
 import InteractiveWelcome from "./components/InteractiveWelcome";
@@ -11,7 +9,6 @@ import TodoList from "./components/TodoList";
 import Welcome from "./components/Welcome";
 import Container from "./components/Container";
 import FunctionSum from "./components/FunctionSum";
-
 import { LanguageContext } from "./LanguageContext";
 import DisplayLanguage from "./Displaylanguage";
 
@@ -29,26 +26,24 @@ class App extends React.Component {
   render() {
     return (
       <div>
-      <div>
-        <select onChange={this.handleChangeLanguage} value={this.state.language}>
-          <option value="en">English</option>
-          <option value="it">Italian</option>
-          <option value="Ger">German</option>
-        </select>
-        <LanguageContext.Provider value={this.state.language}>
-          <DisplayLanguage />
-        </LanguageContext.Provider>
-      </div>
+        <div>
+          <select onChange={this.handleChangeLanguage} value={this.state.language}>
+            <option value="en">English</option>
+            <option value="it">Italian</option>
+            <option value="Ger">German</option>
+          </select>
+          <LanguageContext.Provider value={this.state.language}>
+            <DisplayLanguage />
+          </LanguageContext.Provider>
+        </div>
+
         <Container title="My Title">
-
-
-
-          {/*<Counter initialCount={5} increment={3} interval={3000} />
           <ClickCounter />
+          <Counter initialCount={5} increment={3} interval={3000} />
           <ClickTracker />
           <InteractiveWelcome />
           <Login />
-    <UncontrolledLogin /> */}
+          <UncontrolledLogin />
           <TodoList
             render={(items, removeItem) => (
               <ul>
@@ -63,8 +58,7 @@ class App extends React.Component {
           />
           <Welcome />
           <FunctionSum />
-
-        </Container>
+          </Container>
 
 
       </div>

@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 
 {/*import React from 'react'
 
@@ -30,8 +30,13 @@ export default ClickCounter*/}
 
 
 
-function ClickCounter({initialValue = 0}) {
-    const[count, setCount] = useState(initialValue)
+function ClickCounter({onCountChange}) {
+    const[count, setCount] = useState(0)
+
+    useEffect(() => {
+        onCountChange(count)
+
+    }, [count, onCountChange])
 
     const clickHandler = () => {
         setCount(count + 1);
