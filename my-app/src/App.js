@@ -13,10 +13,19 @@ import { LanguageContext } from "./LanguageContext";
 import DisplayLanguage from "./Displaylanguage";
 import GithubUser from "./components/GithubUser";
 import GithubUserList from "./components/GithubUserList";
+import CarDetails from "./components/CarDetails";
+
+const carData = {
+  model: 'Opel',
+  year: '2023',
+  color: 'blue'
+}
 class App extends React.Component {
   state = {
     language: 'en',
   };
+
+ 
 
   handleChangeLanguage = event => {
     const { value } = event.target;
@@ -42,8 +51,8 @@ class App extends React.Component {
 
         <Container title="My Title">
      
-      <GithubUserList />
-          
+         
+          <CarDetails initialData={carData} />
           {/*<ClickCounter />
           <Counter initialCount={5} increment={3} interval={3000} />
           <ClickTracker />
@@ -64,6 +73,7 @@ class App extends React.Component {
           />
           <Welcome />
                 <FunctionSum />*/}
+                  {/*<GithubUserList /> */}
           </Container>
 
 
