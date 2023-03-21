@@ -14,6 +14,26 @@ import DisplayLanguage from "./Displaylanguage";
 import GithubUser from "./components/GithubUser";
 import GithubUserList from "./components/GithubUserList";
 import CarDetails from "./components/CarDetails";
+import FilteredList from "./components/FilteredList";
+
+const list = [
+  {
+      name: 'caterina lo grasso',
+      id: '1',
+      age: 34,
+  },
+  {
+      name: 'davide terranova',
+      id: '2',
+      age: 33,
+  },
+  {
+      name: 'antonella giorlando',
+      id: '3',
+      age: 32,
+  },
+]
+
 
 const carData = {
   model: 'Opel',
@@ -40,6 +60,7 @@ function App() {
           <DisplayLanguage />
         </LanguageContext.Provider>
       </div>
+      <FilteredList list={list} />
 
      {/* <Container title="My Title">
         <CarDetails initialData={carData} />
