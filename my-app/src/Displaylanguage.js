@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { useContext} from "react";
 import { LanguageContext } from "./LanguageContext";
 
-class DisplayLanguage extends Component {
+{/*class DisplayLanguage extends Component {
     render() {
       return (
         <div>
@@ -18,4 +18,14 @@ class DisplayLanguage extends Component {
     }
   }
 
-export default DisplayLanguage
+export default DisplayLanguage */}
+
+export default function DisplayLanguage() {
+  const language = useContext(LanguageContext);
+
+  return (
+    <div>
+      <h1>Current language is: {language}</h1>
+    </div>
+  );
+}
