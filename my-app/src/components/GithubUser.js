@@ -1,5 +1,5 @@
 import React from 'react';
-import useGithubUser from './useGitHubUser';
+import useGithubUser from './useGithubUser';
 
 
 
