@@ -1,16 +1,23 @@
 import React from 'react';
 import useGithubUser from './useGithubUser';
 
-
-
 function GithubUser({ username }) {
-  const [fetchUser, data, error, loading] = useGithubUser(username);
+  const { user, error, isLoading, refetch } = useGithubUser(username);
+
+  const handleRefresh = () => {
+    refetch();
+  };
 
   return (
     <div>
-      {loading && <h1>Loading...</h1>}
+      {isLoading && <h1>Loading...</h1>}
       {error && <h1>{error.message}</h1>}
-      {data?.name && <h1>{data.name}</h1>}
+      {user?.name && (
+        <div>
+          <h1>{user.name}</h1>
+          <button onClick={handleRefresh}>Refresh</button>
+        </div>
+      )}
     </div>
   );
 }
