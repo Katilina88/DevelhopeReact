@@ -30,7 +30,8 @@ import { Link, Outlet } from "react-router-dom";
                     </li>
                 ))}
             </ul>
-   <Link to={`/users/${username}`}>{username}</Link>
+
+   <Link to={`/users/${users}`}>{users}</Link>
   <Outlet />
 
         </div>
