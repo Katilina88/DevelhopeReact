@@ -13,17 +13,7 @@ import React from 'react'
 ////}
 //export default Welcome 
 
-function Welcome(props) {
-    return (
-      <div className="welcome">
-        <p>Welcome, {props.name}</p>
-        <p>Your age is {props.age}</p>
-      </div>
-    );
-  }
-  
-  export default Welcome;
- 
+
 
 
 
