@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import GithubUser from './GithubUser'
-
+import { Link, Outlet } from "react-router-dom";
+  
 
 
  function GithubUserList() {
@@ -29,6 +30,9 @@ import GithubUser from './GithubUser'
                     </li>
                 ))}
             </ul>
+   <Link to={`/users/${username}`}>{username}</Link>
+  <Outlet />
+
         </div>
     );
 }
