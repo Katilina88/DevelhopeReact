@@ -6,7 +6,7 @@ function useGithubUser(username) {
     
    
 
-  return { user: data, error, loading: !data && !error}
+  return { user: data, error, isLoading: !data && !error}
 }
 
 export default useGithubUser
