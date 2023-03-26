@@ -16,6 +16,7 @@ function App() {
         <Route path="/welcome" element={<Welcome1 name={"Caterina"} />} />
         <Route path="/counter1" element={<Counter1 /> } />
         <Route path="/users/:username" element={<ShowGithubUser />} />
+        <Route path="*" element={<h1>La pagina che stai cercando non esiste.</h1>} />
       </Routes>
     </ Container>
   );
