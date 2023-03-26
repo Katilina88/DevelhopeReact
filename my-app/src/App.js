@@ -4,12 +4,12 @@ import Welcome1 from "./components/Welcome1";
 import Counter1 from "./components/Counter1"; 
 import Container from "./components/Container"; 
 import ShowGithubUser from "./components/ShowGithubUser";
+import GithubUserList from "./components/GithubUserList"
 
 function App() {
   return (
     <Container>
-      <Link to="/welcome">Welcome</Link>
-      <Link to="/counter1">Counter </Link>
+      <Link to="/welcome">Welcome</Link> | <Link to="/counter1">Counter </Link>
       <Link to="/users/:Katilina88"> Users</Link>
       <Routes>
      
@@ -17,6 +17,9 @@ function App() {
         <Route path="/counter1" element={<Counter1 /> } />
         <Route path="/users/:username" element={<ShowGithubUser />} />
         <Route path="*" element={<h1>La pagina che stai cercando non esiste.</h1>} />
+        <Route path="/users" element={<GithubUserList />}>
+        <Route path=":username" element={<ShowGithubUser />} />
+        </Route>
       </Routes>
     </ Container>
   );
