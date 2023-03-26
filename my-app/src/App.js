@@ -8,8 +8,7 @@ import ShowGithubUser from "./components/ShowGithubUser";
 function App() {
   return (
     <Container>
-      <Link to="/welcome">Welcome</Link>
-      <Link to="/counter1">Counter </Link>
+      <Link to="/welcome">Welcome</Link> | <Link to="/counter1">Counter </Link>
       <Link to="/users/:Katilina88"> Users</Link>
       <Routes>
      
