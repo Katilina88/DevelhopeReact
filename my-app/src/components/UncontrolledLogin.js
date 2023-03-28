@@ -3,6 +3,12 @@ import React, { createRef } from 'react';
 class UncontrolledLogin extends React.Component {
   formRef = createRef();
 
+  componentDidMount(){
+    const form = this.formRef.current; 
+    form.elements.username.focus()
+  }
+  
+
   handleSubmit = (event) => {
     event.preventDefault();
     const form = this.formRef.current;
